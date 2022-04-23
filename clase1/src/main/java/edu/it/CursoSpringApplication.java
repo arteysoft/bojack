@@ -7,5 +7,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class CursoSpringApplication {
 	public static void main(String[] args) {
 		System.out.println("Bienvenidos al curso de JAVA");
+		new Ejercicio1().run();
 	}
 }

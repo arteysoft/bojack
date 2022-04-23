@@ -1,1 +1,1 @@
-java -jar target/cursoCustom-ALL.jar
+java -jar target/CursoJava-ALL.jar
