@@ -27,6 +27,5 @@ public class Ejercicio1 {
 		
 		System.out.println(M3 - 100); // Composicion
 		System.out.println(0.027f + 0.029f + 0.035f); // Suma Directa
-		
 	}
 }

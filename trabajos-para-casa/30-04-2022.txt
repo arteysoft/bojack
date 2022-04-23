@@ -1,0 +1,33 @@
+Para el 30 de Abril Repasar todos los operadores
+
+Dividirlos en Unarios, Binarios y Ternario.
+
+Como crear un objeto con la keyword new 
+
+que pasa si en vez del modificador public del metodo le pongo private
+Intento compilar, que error me tira.
+
+Como definir un constructor en java. Simplemente como es la sintaxis.
+Cuando se ejecuta el mismo.
+
+Como pasar argumentos por linea de comandos. El ide tiene una opcion
+para emular el pasaje de argumentos por linea de comando.
+
+Como llegan esos argumentos al metodo main.
+
+-----------------------------------------------------------------------
+Como para ir adelantados
+
+Que es la sobrecarga de metodos ? para que sirve ?
+-----------------------------------------------------------------------
+
+Este ejercicio sirve para todas las materias de lenguajes de programacion
+
+Conjetura de collatz o 3n + 1
+
+conjetura de collatz en youtube esta recontra explicado el algoritmo.
+
+
+
+
+
