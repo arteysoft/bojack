@@ -1,0 +1,61 @@
+Cada vez que uso la keyword new estoy creando un objeto y 
+eventualmente estoy guardando la referencia a ese objeto
+
+Ejemplo
+
+A a1 = new A();
+A a2 = new A();
+
+a1 es una referencia a un objeto del tipo A
+es una referencia a otro objeto del tipo A
+
+Puedo jugar poniendo a1 = a2; a2 = a1, etc.
+Puedo intercambiar las referencias y los objetos
+van a permanecer en el mismo lugar.
+
+a1.nombre = "Federico"; 
+pregunta: Que cambia ? el puntero ? o el objeto ?
+
+a2 = a1; 
+pregunta = Sigue accesible el objeto que era apuntado por a2 ?
+pregunta = El Objeto que era apuntado por a2, quedo en un limbo ?
+respuesta = Exacto, el proceso del Garbage collector, lo borra.
+
+1 {
+2   B b1 = new B();
+3 }
+4 // Aca NO existe b1
+5 {
+6   B b2 = new B();
+7 }
+8 // b2 ya no existe aca
+
+pregunta: donde se borra el objeto que es apuntado por b1 ? y por b2 ?
+
+Que pasa si quiero intercambiar dos valores en de dos enteros
+
+Integer entero1 = 3
+Integer entero2 = 5
+Integer auxiliar = null;
+
+auxiliar = entero1;
+entero1 = entero2
+entero2 = auxiliar;
+
+Que pasa si quiero intercambiar dos referencias a objetos.
+
+A objeto1 = new A(); // llamemosle Silvana
+A objeto2 = new A(); // braian
+A auxiliar = null;
+
+auxiliar = objeto1;
+objeto1 = objeto2;
+objeto2 = auxiliar;
+
+Una vez intercambiados
+
+objeto1 == Braian
+objeto2 == Silvana
+
+
+
