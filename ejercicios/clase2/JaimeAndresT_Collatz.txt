@@ -1,0 +1,34 @@
+package collatzTres;
+
+import java.util.Scanner;
+
+public class Collatz {
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		  Scanner StdIn = new Scanner(System.in);
+	        System.out.println("Ingrese un número para calcular la conjetura de Collatz: ");
+	        int num = StdIn.nextInt();
+	        collatz(num);
+	    }
+
+	    public static void collatz(int num) {
+	    	
+	    	
+	        System.out.println("Resultado:");
+	         if(num>0){
+	            while (num != 1) {
+	                if (num % 2 == 0) {
+	                	num = num / 2;
+	                } else {
+	                	num = (num * 3) + 1;
+	                }
+	                System.out.print(num + " ");
+	            }
+	        }
+	        else{
+	            return;
+	        }
+	    }
+	}
+
