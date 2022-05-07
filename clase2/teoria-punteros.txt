@@ -1,4 +1,4 @@
-Cada vez que uso la keyword new estoy creando un objeto y 
+Cada vez que uso la keyword new estoy creando un objeto y
 eventualmente estoy guardando la referencia a ese objeto
 
 Ejemplo
@@ -13,10 +13,10 @@ Puedo jugar poniendo a1 = a2; a2 = a1, etc.
 Puedo intercambiar las referencias y los objetos
 van a permanecer en el mismo lugar.
 
-a1.nombre = "Federico"; 
+a1.nombre = "Federico";
 pregunta: Que cambia ? el puntero ? o el objeto ?
 
-a2 = a1; 
+a2 = a1;
 pregunta = Sigue accesible el objeto que era apuntado por a2 ?
 pregunta = El Objeto que era apuntado por a2, quedo en un limbo ?
 respuesta = Exacto, el proceso del Garbage collector, lo borra.
