@@ -2,7 +2,7 @@ package edu.it;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import edu.it.polimorfismo.EjemplosPolimorfismo;
+import edu.it.juego.Init;
 
 @SpringBootApplication
 public class CursoSpringApplication {
@@ -20,6 +20,6 @@ public class CursoSpringApplication {
 		EjemploStatic.metodoEstatico();
 		*/
 		
-		new EjemplosPolimorfismo().run();
+		new Init().run();
 	}
 }

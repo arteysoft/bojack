@@ -14,7 +14,6 @@ package edu.it.polimorfismo;
  */
 
 public interface ObjetoVolador {
-	public void descripcion();
 	public void despegar();
 	public void viajar();
 	public void aterrizar();
