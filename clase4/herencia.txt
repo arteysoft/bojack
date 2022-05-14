@@ -1,0 +1,56 @@
+Herencia
+
+class Felinos {
+   Integer edad;
+   Integer cantAlimento;      
+}
+
+class GatoSiames {
+   Felino felino;
+   String cuidados;   
+}
+
+class GatoEuropeo {
+   Felino felino;
+}
+
+1) Preferir la composicion a la herencia
+   Este tipo de herencia es el tipo de "herencia de tipos"
+
+
+2) Herencia de comportamiento
+
+   clase [abstracta o interfaz] Imprimir
+      ImprimirHojaSimple     tenga un atributo que sea InfoGeneralImpresion {}
+      ImprimirDobleFaz       tenga un atributo que sea InfoGeneralImpresion {}
+      ImprimirPDF            tenga un atributo que sea InfoGeneralImpresion {}
+      ImprimirTXT            tenga un atributo que sea InfoGeneralImpresion {}
+
+
+3) Inversion de control
+
+   abstract clase ControlDeCalidadProducto {
+       public void testeoCompleto() {
+          aplicarComponentesPrimos();
+          for (int x = 1; x < 10; x++) {
+             iterarConTestDeRuptura();
+          }
+          pruebaInifuga();
+       }
+       abstract aplicarComponentesPrimos();
+       abstract iterarConTestDeRuptura();
+       abstract pruebaInifuga();   
+   }
+   
+   class Botella extends ControlDeCalidadProducto {
+
+   }
+
+
+   Botella b = new Botella();
+   b.testeoCompleto();
+
+   JugeteDePlastico j = new JugeteDePlastico();
+   j.testeoCompleto();
+
+

@@ -1,0 +1,21 @@
+class A {
+   private Servicio s;
+   public A(Servicio s) {
+      this.s = s;
+   }
+   public void hacerTrabajo() {
+      if (iva == 11) {
+         s.imprimir();
+      }
+   }
+}
+
+A ----------------------------------------> Servicio
+                                                ServicioImprimir
+                                                ServicioGuardarEnArchivo
+                                                ServicioGuardarEnBaseDeDatos
+                                                ServicioGuardarEnMongoDB
+                                                ServicioGuardarEnUnWebService
+
+Single Responsability Principle
+Open Close Principle

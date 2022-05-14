@@ -1,0 +1,43 @@
+/*
+Las clases abstractas al igual que las interfaces, NO se pueden instanciar
+
+*/
+
+abstract class RecetaBase {
+   public void mostrarPreparacion() {
+      paso1();
+      paso2();
+      paso3();
+   }
+} 
+
+Braian
+
+class PagarImpuesto extends RecetaBase {}
+
+Jaime
+
+class PrepararArrozConPollo extends RecetaBase {}
+
+Juan
+
+class RecetaFelicidad extends RecetaBase {}
+
+Moises
+
+class ProgramarEnJavascript extends RecetaBase {}
+
+Silvana 
+
+class AprenderMatematicaEn3Pasos extends RecetaBase {}
+
+-----------------------------------------------------------
+
+new PagarImpuesto().mostrarPreparacion(),
+new PrepararArrozConPollo().mostrarPreparacion()
+...
+...
+...
+
+
+
