@@ -1,14 +1,21 @@
 /*
 Las clases abstractas al igual que las interfaces, NO se pueden instanciar
 
+Surgio en clase PROHIBIR la reescritura de mostrarPreparacion y con la palabra
+reservada final, se puede lograr esto.
+
 */
 
 abstract class RecetaBase {
-   public void mostrarPreparacion() {
+   public final void mostrarPreparacion() {
       paso1();
       paso2();
       paso3();
    }
+   // no sobreescribir el metodo mostrarPreparacion, sino mas bien los metodos abstractos
+   abstract paso1();
+   abstract paso2();
+   abstract paso3();
 } 
 
 Braian

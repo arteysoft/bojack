@@ -1,0 +1,48 @@
+/*
+Las clases abstractas al igual que las interfaces, NO se pueden instanciar
+
+*/
+
+abstract class RecetaBase {
+   public void mostrarPreparacion() {
+      paso1();
+      paso2();
+      paso3();
+   }
+} 
+
+
+//Moises
+
+class ProgramarEnJavaScript extends RecetaBase {
+
+private Boolean sabeProgramar = true;
+
+public ProgramarEnJavaScript (Boolean sabeProgramar){
+	super(/*aqui van los atributos*/) /*Constructor de la clase padre (?)*/
+}
+
+@Override
+	public String toString() {
+		return "ProgramarEnJavaScript [sabeProgramar=" + sabeProgramar + ", toString()=" + super.toString() + "]";
+	}
+  
+  public Float getsabeProgramar() {
+		return sabeProgramar;
+	}
+
+	public void setsabeProgramar(Boolean sabeProgramar) {
+		this.sabeProgramar = sabeProgramar;
+	}
+  
+  
+ public void  mostrarPreparacion() {
+ 		if (sabeProgramar == true)
+    	print("Sabe programar") 
+ 	}
+  
+
+/* En una clase de testing */
+
+new ProgramarEnJavaScript().mostrarPreparacion("true")
+
