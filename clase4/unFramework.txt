@@ -1,0 +1,11 @@
+El framework que vamos a ver no tiene una clase en la que usa inversion
+de control, sino mas bien una serie de clases que lo hacen
+
+[SUPER ESTRUCTURA BASTANTE ABSTRACTA]
+
+Vamos a verla en la clase 8
+
+Servlet es un ejemplo de esto... Ver servlet
+
+
+
