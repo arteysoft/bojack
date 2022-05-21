@@ -10,7 +10,14 @@ public class EjercicioPila {
 		 */
 		
 		Pila p = new Pila();
-		p.m1();
+		
+		try {
+			p.m1(10);
+		}
+		catch (Exception ex) {
+			System.out.println("");
+			ex.printStackTrace();
+		}
 		
 		/*
 		 * Ejercicio, pasar a cada uno de los mx un integer
