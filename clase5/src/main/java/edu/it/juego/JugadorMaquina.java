@@ -3,16 +3,16 @@ package edu.it.juego;
 import java.util.Random;
 
 public class JugadorMaquina implements Jugador {
-	public String jugar() {
+	public ElementosJuego jugar() {
 		int elemento = new Random().nextInt(3);
 		
 		switch (elemento) {
 		case 0:
-			return "Piedra";
+			return ElementosJuego.PIEDRA;
 		case 1:
-			return "Papel";
+			return ElementosJuego.PAPEL;
 		case 2:
-			return "Tijera";
+			return ElementosJuego.TIJERA;
 		default:
 			System.out.println("Atencion, esto es un error !!!");
 			return null;

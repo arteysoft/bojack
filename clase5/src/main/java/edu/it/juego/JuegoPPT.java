@@ -8,9 +8,22 @@ public class JuegoPPT {
 		System.out.println("El jugador 1, selecciono " + strj1);
 		System.out.println("El jugador 2, selecciono " + strj2);
 		
-		System.out.println("Quedaria la parte del ejercicio donde da al ganador... ");
-		
-		if (strj1.equals("Piedra") && strj2.equals("Tijera")) {
+		if (strj1.equals(ElementosJuego.PIEDRA) && strj2.equals(ElementosJuego.TIJERA)) {
+			return 1;
+		}
+		if (strj1.equals(ElementosJuego.PIEDRA) && strj2.equals(ElementosJuego.PAPEL)) {
+			return 2;
+		}
+		if (strj1.equals(ElementosJuego.PAPEL) && strj2.equals(ElementosJuego.PIEDRA)) {
+			return 1;
+		}
+		if (strj1.equals(ElementosJuego.PAPEL) && strj2.equals(ElementosJuego.TIJERA)) {
+			return 2;
+		}
+		if (strj1.equals(ElementosJuego.TIJERA) && strj2.equals(ElementosJuego.PIEDRA)) {
+			return 2;
+		}
+		if (strj1.equals(ElementosJuego.TIJERA) && strj2.equals(ElementosJuego.PAPEL)) {
 			return 1;
 		}
 		

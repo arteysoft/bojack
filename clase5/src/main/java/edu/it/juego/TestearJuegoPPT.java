@@ -1,38 +1,31 @@
 package edu.it.juego;
 
-class StubPapel implements Jugador {
-	public String jugar() {
-		return "Papel";
-	}
-}
-
-class StubPiedra implements Jugador {
-	public String jugar() {
-		return "Piedra";
-	}
-}
-
-class StubTijera implements Jugador {
-	public String jugar() {
-		return "Tijera";
-	}
-}
-
 public class TestearJuegoPPT {
+	
 	public void run() {
+		/*
+		 * Que se agrego en java 8
+		 * Se quita todo lo menos significativo, el codigo declarativo
+		 * y tengo la posibilidad de escribir menos codigo.
+		 */
+		
+		Jugador stubPapel = () -> ElementosJuego.PAPEL;
+		Jugador stubPiedra = () -> ElementosJuego.PIEDRA;
+		Jugador stubTijera = () -> ElementosJuego.TIJERA;
+		
 		/*
 		 * Como funciona un test ?
 		 * Yo le voy a poner un caso de uso, y voy a validar
 		 * lo que yo espero que sea la respuesta
 		 * ejemplo "Papel" "Piedra" -> Ganador 1
 		 */
-		int valorReferencia = JuegoPPT.jugar(new StubPiedra(), new StubTijera());
+		int valorReferencia = JuegoPPT.jugar(stubTijera, stubPiedra);
 		
-		if (valorReferencia == 1) {
-			System.out.println("Es correcto el funcionamiento de Piedra contra tijera");
+		if (valorReferencia == 2) {
+			System.out.println("Es correcto el funcionamiento de stubTijera contra stubPiedra");
 		}
 		else {
-			System.out.println("Es INcorrecto el funcionamiento de Piedra contra tijera");
-		}
+			System.out.println("Es INcorrecto el funcionamiento de stubPiedra contra stubPiedra");
+		}	
 	}
 }

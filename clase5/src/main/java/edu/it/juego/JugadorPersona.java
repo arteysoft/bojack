@@ -3,7 +3,7 @@ package edu.it.juego;
 import java.util.Scanner;
 
 public class JugadorPersona implements Jugador {
-	public String jugar() {
+	public ElementosJuego jugar() {
 		System.out.println("Por favor, ingrese un elemento");
 		System.out.println("1.- Piedra");
 		System.out.println("2.- Papel");
@@ -15,11 +15,11 @@ public class JugadorPersona implements Jugador {
 		
 		switch (elemento) {
 		case 1:
-			return "Piedra";
+			return ElementosJuego.PIEDRA;
 		case 2:
-			return "Papel";
+			return ElementosJuego.PAPEL;
 		case 3:
-			return "Tijera";
+			return ElementosJuego.TIJERA;
 		default:
 			System.out.println("Atencion, esto es un error !!!");
 			return null;
