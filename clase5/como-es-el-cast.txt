@@ -1,0 +1,33 @@
+Object x = new Brian(); --- Sabemos que Brian es de la familia de Avilé.
+
+class Avilé {}
+class Brian extends Avilé {}
+
+x es un puntero que actualmente esta apuntando a un objeto del tipo Brian.
+
+La herencia determina una relacion de "es un" en este caso Brian es un Avilé
+
+[AVILE] Superclase
+
+[BRIAN] Subclase
+
+Avile a1;
+
+a1 = x; // Nosotros sabemos que x apunta a un Brian.
+desde el punto de vista nuestro ? sabemos que No hay conflicto de tipos.
+
+Desde el punto de vista del compilador, no me deja realizar esta asignacion
+dado que a1 es mas concreto que x
+a1 es Avile 
+x es object
+
+a1 = (Avile)x; -> Puede tirar un error si es que x NO es de la familia de Avile
+por ejemplo si es del tipo Imprimir, o del Tipo ImprimirPDF.
+
+
+
+
+
+
+ 
+

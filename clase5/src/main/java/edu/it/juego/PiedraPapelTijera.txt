@@ -1,0 +1,10 @@
+Se requiere realizar el juego de Piedra Papel o Tijera
+
+Lo que vamos a hacer incapie es en:
+
+Separar totalmente la logica del juego de cualquier interaccion
+que tenga el usuario
+
+El objetivo principal para aprender hoy es separar logica con 
+interaccion.
+
