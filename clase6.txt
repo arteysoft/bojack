@@ -1,0 +1,15 @@
+Temas pendientes de manejo de errores
+
+Extender de RuntimeException
+Pasar datos a traves de un objeto de tipo exception
+Utilizar el super();
+Atrapar varios tipos de exception y ver en que orden
+hay que colocarlos ()
+la keyword finally
+
+try {} finally {}
+
+Ejercicio de botella y servir donde se arroja un exception
+en caso que la Class Botella no tenga el suficiente liquido.
+
+
