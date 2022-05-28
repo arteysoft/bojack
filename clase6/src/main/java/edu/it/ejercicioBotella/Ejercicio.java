@@ -12,5 +12,29 @@ public class Ejercicio {
 				.append("4) El objeto FinDeLiquidoException debe tener un metodo, obtenerCantRestante");
 		
 		System.out.println(strBld);
+		
+		Botella b = null;
+		
+		try {
+			b = new Botella(850);
+			b.servir();
+			b.servir();
+			b.servir();
+			b.servir();
+		}
+		catch (FinDeLiquidoException ex) {
+			/*
+			System.out.println(ex.getMessage());
+			System.out.println("No hay mas liquido, la cantidad restante es: " + ex.cantidadRestante + " ml");
+			System.out.println("No hay mas liquido, la cantidad restante es: " + b.cantidadDisponible() + " ml");
+			}
+			*/
+			for (StackTraceElement ste : ex.getStackTrace()) {
+				System.out.println(ste.getClassName());
+				System.out.println(ste.getLineNumber());
+				System.out.println(ste.getMethodName());
+				System.out.println("-------------------------------");
+			}
+		}
 	}
 }
