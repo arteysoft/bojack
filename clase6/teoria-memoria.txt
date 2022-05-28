@@ -1,0 +1,135 @@
+Existen tres areas de memoria
+
+Variables globales
+
+Un ejemplo de variable global podria ser un logger
+para que me sirve ? porque de cualquier parte de mi codigo puedo hacer.
+
+logger.log('lo que quiero loguear')
+
+Otro ejemplo es si tengo datos que van a utilizar todos los servicios
+u objetos.
+
+Todo lo que esta en System es de acceso global. En cualquier momento
+puedo acceder a System.out System.in es una variable global.
+
+Por mi parte, tambien en algun punto voy a necesitar una variable global.
+
+Ahi es donde entra static
+
+class DatosGlobales {
+   public static String nombreApp = 'App Facturacion'.
+}
+
+Que pasa si no existiera static ?????????
+
+o bien el DatosGlobales o System o Logger pasarlos como parametro para el 
+metodo que lo necesite.
+
+o sino de lo contrarios
+
+yo tendria que hacer new DatosGlobales().nombreApp.
+
+-------------------------------------------------------------------------
+
+Supongamos que tengo un servicio DatosClima.
+
+Si yo hago new DatosClima() // instancio todo el servicio.
+
+Ahora bien, si lo tengo el servicio como variable global ? 
+DatosClima siempre esta disponible.
+
+Otra pregunta. Entonces. DEBO UTILIZAR VARIABLES GLOBALES ????
+
+CUIDADO !!!!!
+
+Tiene consecuencias.
+
+-------------------------------------------------------------------------
+
+Entramos en otro terreno que es el de las funciones puras.
+
+1) Que es una funcion pura ? 
+   Es aquella que dado un input retorna siempre el mismo output.
+
+   Math.round(2.34) -> siempre me va a dar 2.35.
+   
+   Segun su configuracion puede ser 2.3 o bien 2.
+
+   La cosa es que dado un input, siempre retorna el mismo output.
+
+
+   Ventaja que tiene es que son simples de razonar. por end RECONTRA
+   REUTILIZABLES.
+
+   esPar(Integer x) -> Boolean
+
+   SumarYAgregarElValor([2,3,4]) -> [9,2,3,4]
+
+2) Que es una funcion impura ?
+
+   Un getter a un objeto. Dado que solo es output, dependo del estado
+   del objeto para saber el valor.
+
+   Si una funcion, o metodo hace uso de variables globales ? es impura.
+
+   Porque: Porque dado un input retorna un output que NO es predecible.
+
+   Ejemplo. ObtenerNombreDelSistemaOperativo('El nombre del sistema es: ') ->
+   El nombre del sistema es Mac OS.
+
+   Si lo que retorna una funcion depende de una configuracion ? tambien es
+   impura.
+
+   De una base de datos ? tambien.
+   De la fecha y la hora tambien es impura.
+
+3) Como lidiar con el tema de las variables globales o static.
+
+   veamos estos dos metodos para ver que ventajas y desventajas le vemos.
+
+
+   public Boolean sePuedeUsarLaBaseDeDatos() {
+      Date fecha = Date.now();
+      if (fecha.getHour() > 4 && fecha.getHour() < 5) {
+         return false;
+      }
+      return true;
+   }            
+
+   Supongamos que el codigo es mucho mas complejo que eso.
+   Como lo testeo ????? como me aseguro que su complejidad no me afecte.
+
+   una forma es convertirlo al metodo en funcion pura.
+
+   public Boolean sePuedeUsarLaBaseDeDatos(Date fecha) {
+      if (fecha.getHour() > 4 && fecha.getHour() < 5) {
+         return false;
+      }
+      return true;
+   } 
+   
+   Observar como si llegare a ser mas complejo, puedo testearla 
+   la funcion infinitamente y asegurarme de su correcto funcionamiento.
+
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
