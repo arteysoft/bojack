@@ -2,6 +2,7 @@ package edu.itcolecciones;
 
 import java.util.HashSet;
 
+import edu.it.dto.Alumno;
 import edu.it.dto.Punto;
 
 public class ColeccionHashSet {
@@ -20,6 +21,17 @@ public class ColeccionHashSet {
 		
 		for (Punto p : miSet) {
 			System.out.println(p);
+		}
+		
+		var otroSet = new HashSet<Alumno>();
+		
+		otroSet.add(new Alumno("Braian", "David"));
+		otroSet.add(new Alumno("Jaime", "Andres"));
+		otroSet.add(new Alumno("Silvana", "Sanchez"));
+		otroSet.add(new Alumno("Silvana", "Sanchez"));
+		
+		for (Alumno a : otroSet) {
+			System.out.println(a);
 		}
 	}
 }

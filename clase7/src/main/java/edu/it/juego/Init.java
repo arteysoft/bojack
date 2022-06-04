@@ -12,9 +12,17 @@ public class Init {
 		 * 
 		 */
 		
-		JuegoPPT.jugar(
+		var gano = JuegoPPT.jugar(
 				new JugadorMaquina(), 
 				new JugadorPersona()
 		);
+		
+		System.out.println();
+		System.out.println("Gano el jugador: " + gano);
+		// Hacer un hashMap<Integer, String> donde 
+		// 0 Hubo Empate
+		// 1 Gano Maquina
+		// 2 Gano Persona
+		// Luego, la composicion va a quedar, HashMap.get(resultado)
 	}
 }
