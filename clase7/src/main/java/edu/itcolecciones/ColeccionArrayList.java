@@ -16,12 +16,20 @@ public class ColeccionArrayList {
 		coleccion.add("Braian");
 		coleccion.add("Silvana");
 		
-		for (String nombre : coleccion) {
-			System.out.println(nombre);
-		}
-		
 		// Tengo tres entradas en un arrayList
 		// Quiero atraves de un while ir borrando todas las
 		// entradas que yo tengo. Hasta que coleccion.size() == 0
+		
+		// Una alternativa para borrar todos los elementos
+		// es hacer coleccion = new ArrayList<String>();
+		
+		while (coleccion.size() > 0) {
+			for (String nombre : coleccion) {
+				System.out.println(nombre);
+			}
+			coleccion.remove(0);
+			System.out.println("Removi un elemento");
+			System.out.println();
+		}
 	}
 }
