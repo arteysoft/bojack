@@ -1,6 +1,16 @@
 package edu.it.juego;
 
+import java.util.HashMap;
+
 public class Init {
+	private HashMap<Integer, String> mapaGanador = new HashMap<>();
+	
+	public Init() {
+		mapaGanador.put(0, "Es empate");
+		mapaGanador.put(1, "Gana jugador Maquina");
+		mapaGanador.put(2, "Gana jugador Humano");
+	}
+	
 	public void run() {
 		System.out.println("Juego de Piedra Papel o Tijera");
 		
@@ -18,11 +28,6 @@ public class Init {
 		);
 		
 		System.out.println();
-		System.out.println("Gano el jugador: " + gano);
-		// Hacer un hashMap<Integer, String> donde 
-		// 0 Hubo Empate
-		// 1 Gano Maquina
-		// 2 Gano Persona
-		// Luego, la composicion va a quedar, HashMap.get(resultado)
+		System.out.println(mapaGanador.get(gano));
 	}
 }
