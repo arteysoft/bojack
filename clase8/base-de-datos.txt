@@ -1,0 +1,17 @@
+Para poder acceder a base de datos relacionales
+
+SQL Server
+MYSQL
+MariaDB
+
+Hay un api, que se llama JDBC 
+JAVA DATABASE CONNECTIVITY
+
+Este api, consta de una serie de interfaces con los que voy a interactuar
+pero tener en cuenta que la implementacion de esas interfaces, va a estar
+hecho por el fabricante de la base.
+
+Entonces, las referencias que necesito para trabajar con jdbc son:
+   1) Api de JDBC
+   2) Driver o imple de MariaDB
+
