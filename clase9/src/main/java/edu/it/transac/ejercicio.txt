@@ -1,0 +1,11 @@
+Intentar utilizar los scripts de base de datos
+
+Luego insertar en la tabla movimientos un valor
+y que se reflejado ese movimiento en la tabla saldos
+
+Ejemplo
+
+INSERT movimientos values (1000)
+UPDATE saldos set saldo = saldo + 1000
+
+el metodo se pordia llamar realizarMovimiento(1000)
