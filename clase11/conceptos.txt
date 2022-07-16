@@ -1,0 +1,59 @@
+HTTP Server
+
+Este es un servidor HTTP para servir tanto recursos
+
+   Estaticos (HTML, imagenes, css, txt, etc)
+   
+      Apache HTTP Server
+      Apache Tomcat
+      NGINX
+      Internet Information Server
+
+
+   Dinamicos (Contenido HTML o JSON creado en forma dinamica)
+
+      Apache HTTP Server -> PHP, y otros.
+      NGINX -> PHP, y otros.
+      Internet Information Server -> ASP.NET MVC (C#)
+      Apache Tomcat -> JAVA (archivos .war)
+
+Dentro del contenido dináico, hay de dos clases
+
+      Server side rendering. Generacion de HTML de forma
+      dinámica del lado del servidor; lo q viaja al cliente 
+      browser o Mobile es HTML.
+
+      Client side rendering. Generacion de JSON en forma
+      dinamica para que el cliente Browser o Mobile renderice
+      los datos en formato HTML.
+
+      Normalmente vamos a incluir un framework del lado del cliente
+      Angular o React, u otro, o vanilla javascript.
+
+      
+HTTP es un protocolo basado en ascii.
+Que quiere decir basado en ASCII.
+
+Generalmente los protocolos de red son basados en binario.
+En ASCII significa que puedo leerlos a simple vista.
+
+GET /clientes HTTP 1/1 
+HOST: www.educacionit.com
+
+Para realizar la llamada a un server se usan los verbos
+
+GET, POST, PUT, DELETE
+QUERY, INSERT, UPDATE, DELETE
+
+Los codigos de respuesta van del 2xx al 5xx
+
+
+Estructura de una aplicacion en un servlet container
+
+C:\opt\apache-tomcat-9.0.64\webapps\ROOT -> Esto es para colgar desde el raiz
+C:\opt\apache-tomcat-9.0.64\webapps\ejemplos -> en este caso IP:PUERTO/ejemplos
+
+
+
+
+      
