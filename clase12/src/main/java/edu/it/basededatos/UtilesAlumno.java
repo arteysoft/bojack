@@ -6,6 +6,8 @@ import java.util.UUID;
 
 import com.github.javafaker.Faker;
 
+import edu.it.entities.Alumno;
+
 public class UtilesAlumno {
 	private static Faker fkr;
 	

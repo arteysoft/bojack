@@ -17,11 +17,11 @@ import org.apache.log4j.Logger;
 
 import com.google.gson.Gson;
 
-import edu.it.basededatos.Alumno;
 import edu.it.basededatos.ConnectionCreator;
 import edu.it.basededatos.ConnectionCreatorMariaDB;
 import edu.it.basededatos.PruebaBaseDeDatos;
 import edu.it.basededatos.UtilesAlumno;
+import edu.it.entities.Alumno;
 
 public class AlumnosController extends HttpServlet {
 	Logger logger = Logger.getLogger(getClass());

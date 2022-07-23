@@ -7,6 +7,8 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 
+import edu.it.entities.Alumno;
+
 public class PruebaBaseDeDatos {
 	Logger logger = Logger.getLogger(getClass());
 	public List<Alumno> obtenerAlumnos(Connection conn) throws SQLException {

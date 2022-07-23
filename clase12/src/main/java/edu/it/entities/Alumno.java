@@ -1,4 +1,4 @@
-package edu.it.basededatos;
+package edu.it.entities;
 
 public class Alumno {
 	public String id;
