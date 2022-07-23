@@ -27,6 +27,10 @@
     <url-pattern>/alumno/*</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
+    <servlet-name>inventarAlumno</servlet-name>
+    <url-pattern>/inventar</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
     <servlet-name>frontController</servlet-name>
     <url-pattern>/api/*</url-pattern>
   </servlet-mapping>

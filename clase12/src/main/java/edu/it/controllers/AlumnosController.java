@@ -1,9 +1,10 @@
 package edu.it.controllers;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.io.PrintWriter;
-import java.sql.Connection;
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,10 +26,10 @@ import edu.it.basededatos.UtilesAlumno;
 public class AlumnosController extends HttpServlet {
 	Logger logger = Logger.getLogger(getClass());
 	
-    private void crearEinsertarEnBD() throws Exception {
+    private void crearEinsertarEnBD(Alumno alu) throws Exception {
     	ConnectionCreator creator = new ConnectionCreatorMariaDB();
     	var conn = creator.crearConexion();
-    	new PruebaBaseDeDatos().insertar(conn, UtilesAlumno.generarAlumnoRandom());
+    	new PruebaBaseDeDatos().insertar(conn, alu);
     }
 	private List<Alumno> traerAlumnosBaseDeDatos() throws Exception {
 		ConnectionCreator creator = new ConnectionCreatorMariaDB();
@@ -58,7 +59,17 @@ public class AlumnosController extends HttpServlet {
         PrintWriter out = response.getWriter();
 
         try {
-        	crearEinsertarEnBD();
+        	InputStream is = request.getInputStream();
+        	InputStreamReader isr = new InputStreamReader(is);
+        	BufferedReader br = new BufferedReader(isr);
+        	
+        	// Deberiamos leer lineas hasta agotar el stream
+        	// luego convertir a formato objeto. Recordemos que es JSON
+        	var conversor = new Gson();
+        	
+        	var aluBinario = conversor.fromJson(br, Alumno.class);
+        	System.out.println(aluBinario);
+        	crearEinsertarEnBD(aluBinario);
         }
         catch (Exception ex) {
         	logger.error(ex.getMessage());
@@ -74,7 +85,6 @@ public class AlumnosController extends HttpServlet {
         String json = new Gson().toJson(mapa);
         
         out.println(json);
-        response.setStatus(200);
-		
+        response.setStatus(201);		
 	}
 }
